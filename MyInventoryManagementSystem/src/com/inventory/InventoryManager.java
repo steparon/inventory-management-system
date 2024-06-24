@@ -9,6 +9,7 @@ import java.util.List;
 
 public class InventoryManager {
     final String FILE_PATH = "src/com/inventory/items.txt";
+
     public List<InventoryItem> getAllItems() {
         List<InventoryItem> items = new ArrayList<>();
 
@@ -45,6 +46,22 @@ public class InventoryManager {
         for (InventoryItem item : items) {
             System.out.println(item.toString());
             System.out.println();
+        }
+    }
+
+    public void addItem(InventoryItem item) {
+        List<InventoryItem> items = getAllItems();
+        items.add(item);
+        try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_PATH, true))) {
+            writer.printf("%s, %.2f, %s, %s, %d%n",
+                    item.getName(),
+                    item.getPrice(),
+                    item.getCategory().toLowerCase(),
+                    item.getDescription(),
+                    item.getQuantity());
+            System.out.println("The item has been added successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     public boolean removeByName(String name) {
@@ -87,5 +104,4 @@ public class InventoryManager {
         }
 
     }
-
 }
