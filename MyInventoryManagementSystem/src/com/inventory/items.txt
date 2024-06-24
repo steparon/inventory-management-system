@@ -1,0 +1,10 @@
+Book, 19.99, books, Interesting novel, 50
+Chair, 49.99, furniture, Comfortable office chair, 20
+Table, 89.99, furniture, Wooden dining table, 5
+Coffee Maker, 29.99, appliances, Automatic coffee maker, 30
+Desk Lamp, 24.99, office supplies, Adjustable desk lamp, 40
+Smartphone, 699.99, electronics, Latest model smartphone, 25
+Backpack, 59.99, accessories, Durable travel backpack, 18
+Laptop, 2699.99, electronics, Latest model laptop, 50
+
+
