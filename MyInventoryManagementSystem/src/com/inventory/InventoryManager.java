@@ -32,7 +32,6 @@ public class InventoryManager {
                         InventoryItem item = new InventoryItem(name, price, category, description, quantity);
                         items.add(item);
                     }
-
                 }
             }
         } catch (IOException e) {
@@ -64,6 +63,7 @@ public class InventoryManager {
             e.printStackTrace();
         }
     }
+
     public boolean removeByName(String name) {
         List<InventoryItem> items = getAllItems();
         boolean removed = items.removeIf(item -> item.getName().equalsIgnoreCase(name));
@@ -94,14 +94,11 @@ public class InventoryManager {
         for (InventoryItem item : allItems) {
             if (item.getCategory().equalsIgnoreCase(category)) {
                 foundItems.add(item);
-
             }
         }
-
         for (InventoryItem item : foundItems) {
             System.out.println(item.toString());
             System.out.println();
         }
-
     }
 }

@@ -1,5 +1,9 @@
 package com.inventory;
 
 public enum Category {
-    ELECTRONICS
+    ELECTRONICS,
+
+    GROCERY,
+
+    FRAGILE
 }
